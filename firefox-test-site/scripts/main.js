@@ -1,5 +1,6 @@
 let myImage = document.querySelector('img');
 
+/*     Switches the firefox logos when user clicks on the logo   */
 myImage.onclick = function() {
     let mySrc = myImage.getAttribute('src');
     if(mySrc === 'images/firefox2.png') {
@@ -12,6 +13,8 @@ myImage.onclick = function() {
 let myButton = document.querySelector('button');
 let myHeading = document.querySelector('h1');
 
+
+/*    Prompts a name from the webpage user     */
 function setUserName() {
   let myName = prompt('Please enter your name.');
   localStorage.setItem('name', myName);
@@ -29,6 +32,8 @@ myButton.onclick = function() {
   setUserName();
 }
 
+
+/* Prevents users from leaving the name null or blank */
 function setUserName() {
   let myName = prompt('Please enter your name.');
   if(!myName || myName === null) {
